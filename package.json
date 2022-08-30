@@ -1,5 +1,5 @@
 {
-  "name": "react-hook-form",
+  "name": "react-hook-form-v7",
   "description": "Performant, flexible and extensible forms library for React Hooks",
   "version": "7.35.0-next.0",
   "main": "dist/index.cjs.js",
