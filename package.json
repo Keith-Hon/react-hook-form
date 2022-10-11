@@ -1,7 +1,7 @@
 {
   "name": "react-hook-form-v7",
   "description": "Performant, flexible and extensible forms library for React Hooks",
-  "version": "7.35.0-next.0",
+  "version": "7.35.1",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.mjs",
   "umd:main": "dist/index.umd.js",
@@ -31,8 +31,6 @@
     "build:modern": "rollup -c ./scripts/rollup/rollup.config.js",
     "build:esm": "rollup -c ./scripts/rollup/rollup.esm.config.js",
     "prettier:fix": "prettier --config .prettierrc --write \"**/*.{js,ts,tsx,css}\"",
-    "lint": "eslint '**/*.{js,ts,tsx}'",
-    "lint:fix": "yarn lint -- --fix",
     "type": "tsc --noEmit",
     "coverage": "jest --coverage --coverageReporters=text-lcov",
     "jest-preview": "jest-preview",
@@ -49,7 +47,6 @@
     "api-extractor:build": "yarn build:esm && yarn api-extractor",
     "api-extractor:ci": "node scripts/apiExtractor.js",
     "postversion": "git push && git push origin v$npm_package_version",
-    "prepublishOnly": "yarn && yarn lint:fix && yarn type && yarn test && yarn build",
     "bundlewatch": "yarn build:modern && bundlewatch",
     "start:app": "yarn build:esm && yarn link && yarn --cwd node_modules/react link && yarn --cwd ./app link react react-hook-form && yarn --cwd ./app && yarn --cwd ./app run dev"
   },
